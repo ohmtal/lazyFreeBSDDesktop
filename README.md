@@ -1,7 +1,7 @@
 # lazyFreeBSDDesktop
 
 *lazyFreeBSDDesktop* is a collection of shell scripts to setup a Desktop with packages on a fresh installed FreeBSD. 
-I started in Summer 2025 with this collection. Because i love to setup FreeBSD on different machines but I'am to lazy to do this all manually. 
+I started in Summer 2025 with this collection, because i love to setup FreeBSD on different machines but I'm too lazy to do all the steps manually over and over again. 
 
 Tested with FreeBSD `14.3` and `15.0`, but **use at your own risk!**
 
