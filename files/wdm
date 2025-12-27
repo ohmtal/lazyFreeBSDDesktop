@@ -1,0 +1,24 @@
+#!/bin/sh
+# PROVIDE: wdm
+# REQUIRE: LOGIN cleanvar syscons dbus
+# KEYWORD: display manager
+# AUTHOR : XXTH
+#
+# Add the following line to /etc/rc.conf to enable :
+#
+# wdm_enable="YES"
+#
+
+wdm_enable=${wdm_enable-"NO"}
+
+. /etc/rc.subr
+
+name=wdm
+rcvar=wdm_enable
+
+command=/usr/local/bin/wdm
+# FIXME PID!!
+pidfile="/var/run/${name}.pid"
+
+load_rc_config ${name}
+run_rc_command "$1"

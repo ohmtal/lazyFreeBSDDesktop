@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.9.4
+Type=Application
+Name=updatecheck  STOP
+Comment=
+Exec=/opt/local/updatecheck/pkgUpdateCheck.sh stop
+OnlyShowIn=XFCE;
+RunHook=1
+StartupNotify=false
+Terminal=false
+Hidden=false
+

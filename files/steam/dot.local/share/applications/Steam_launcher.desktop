@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=
+Type=Application
+Name=Steam
+Comment=
+Exec=/usr/local/bin/steam
+Icon=/home/steam/.steam/steam/public/steam_tray_48.tga
+Path=
+Categories=Game
+StartupNotify=false

@@ -1,0 +1,16 @@
+Some settings for a faster boot:
+
+/boot/loader.conf:
+------------------
+boot_mute="YES"
+autoboot_delay="-1"
+beastie_disable="YES"
+
+
+
+maybe /etc/rc.conf:
+-------------------
+rc_startmsgs="NO"
+background_dhclient="YES"
+
+

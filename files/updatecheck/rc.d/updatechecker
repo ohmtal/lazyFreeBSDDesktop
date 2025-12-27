@@ -1,0 +1,19 @@
+#!/bin/sh
+# PROVIDE: updatechecker
+# REQUIRE: NETWORKING SERVERS DAEMON
+
+. /etc/rc.subr
+
+name="updatechecker"
+start_cmd="${name}_start"
+stop_cmd=":"
+
+updatechecker_start()
+{
+        echo "....... STARTING updatechecker ...."
+        /opt/local/updatecheck/fetch_update_information.sh &
+}
+
+rcvar="${name}_enable"
+load_rc_config $name
+run_rc_command "$1"

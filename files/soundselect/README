@@ -1,0 +1,22 @@
+installed and enabled oss
+pkg install oss; sysrc oss_enable="YES"
+>>> does it also work without ?
+
+-----
+dmesg | grep pcm | sort | uniq
+
+pcm0: <NVIDIA (0x0060) (HDMI/DP 8ch)> at nid 4 on hdaa0
+pcm1: <NVIDIA (0x0060) (HDMI/DP 8ch)> at nid 5 on hdaa0
+pcm2: <NVIDIA (0x0060) (HDMI/DP 8ch)> at nid 7 on hdaa0
+pcm3: <Realtek ALC671 (Analog)> at nid 23 and 24,26 on hdaa1
+pcm4: <Realtek ALC671 (Front Analog)> at nid 20 and 25 on hdaa1
+pcm5: <Realtek ALC671 (Rear Analog Line-out)> at nid 33 on hdaa1
+
+
+Change need restart of playing application !
+current: hw.snd.default_unit: 3
+
+HDMI: sysctl hw.snd.default_unit=2
+Speaker: sysctl hw.snd.default_unit=3
+
+

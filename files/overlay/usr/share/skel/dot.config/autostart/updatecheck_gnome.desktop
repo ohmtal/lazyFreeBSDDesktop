@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=/opt/local/updatecheck/pkgUpdateCheck_zenity.sh
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name=update check
+Comment=No description
+X-GNOME-Autostart-Delay=0

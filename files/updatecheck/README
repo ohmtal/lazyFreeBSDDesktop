@@ -1,0 +1,46 @@
+Note: This is not necessary if you use KDE Desktop. Updates are implemented in Discover. 
+
+An FreeBSD update checker using a service to fetch information and a user backend.
+Send a notification with notify-send based on
+this: https://forums.freebsd.org/threads/software-update-notifications.89295/
+
+1.) Installation
+  This directory should be installed to /opt/local/updatecheck
+  This is usually done by the freeBSD_updatecheck script.
+
+2.) service
+ # sudo sh installservice.sh
+
+  This will install the service  for the updatechecker.
+
+  The service will write /tmp/UPDATECHECK  every 15 minutes to check if an
+  update is available.
+
+  This can be used by the pkgUpdateCheck scripts.
+
+  To disable, call:
+    sysrc updatechecker_enable=\"NO\"
+
+2.) user script for xfce
+I did two Versions to check there is an update one with notify-send
+and one use zenity:
+    pkgUpdateCheck.sh and pkgUpdateCheck_zenity.sh
+I use Windowmaker on my old Laptop so i did need a versions without notify.
+Keep in mind you need to install zenity if you use the zenity version.
+
+
+
+2.1) Add the script to xfce on login with param: stop
+     Example:  /opt/local/updatecheck/pkgUpdateCheck.sh stop &
+2.2) add the script to xfce  on logout without an parameter
+     Example:  /opt/local/updatecheck/pkgUpdateCheck.sh stop
+
+3.) Other DM's with autostart file like add the folloing lines:
+
+/opt/local/updatecheck/pkgUpdateCheck.sh stop &
+/opt/local/updatecheck/pkgUpdateCheck.sh &
+
+OR:
+
+/opt/local/updatecheck/pkgUpdateCheck_zenity.sh stop &
+/opt/local/updatecheck/pkgUpdateCheck_zenity.sh &
