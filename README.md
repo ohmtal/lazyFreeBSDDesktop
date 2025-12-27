@@ -8,7 +8,8 @@
   - *Fasterboot* see also `freeBSD_fasterboot.sh`
   - *Update* update this current packages
   - *Musthave* see also `freeBSD_musthave.sh`
-  - *Graphic Driver Selection* see also `freeBSD_graphic_drivers.sh` 
+  - *Graphic Driver Selection* see also `freeBSD_graphic_drivers.sh`
+  - *Select package list* At the moment there are two package installer lists `toms` (my nickname) and `xfce` see also `freeBSD_toms_packages.sh` and 
   
 - **freeBSD_fasterboot.sh** set different parameters in rc.conf and loader.conf to speed up the boot loading
 
@@ -19,7 +20,11 @@
 
 - **freeBSD_graphic_drivers.sh** Install your manually selected you graphic driver.
 
+- freeBSD_toms_packages.sh
+
+- freeBSD_xfce4_packages.sh
 
 
-brokenConsole.sh  e531.sh  freeBSD_current.sh	 freeBSD_fasterboot.sh	     freeBSD_musthave.sh    freeBSD_prepare_user.sh  freeBSD_toms_packages.sh  freeBSD_xfce4_packages.sh  ideapadS10_3.sh	 lazyFreeBSDDesktop.sh	x260.sh
+
+brokenConsole.sh  e531.sh  freeBSD_current.sh	 freeBSD_fasterboot.sh	     freeBSD_musthave.sh    freeBSD_prepare_user.sh    ideapadS10_3.sh	 lazyFreeBSDDesktop.sh	x260.sh
 _dialogs.sh	  files    freeBSD_DM_select.sh  freeBSD_graphic_drivers.sh  _freeBSDPrepareOPT.sh  freeBSD_steam.sh	     freeBSD_updatecheck.sh    _functions.sh		  _install_i386_wine.sh  thinkpad.sh
