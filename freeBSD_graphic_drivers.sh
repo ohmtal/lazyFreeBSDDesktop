@@ -74,7 +74,7 @@ _select_graphics()
 {
   exec 3>&1
   selection=$($DIALOG \
-    --backtitle "Tom's FreeBSD installer" \
+    --backtitle "$BACKTITLE" \
     --title "Graphic Driver Selection" \
     --clear \
     --cancel-label "Cancel" \
