@@ -4,15 +4,20 @@
 
 . /etc/rc.subr
 
+# FIXME add pid
 name="updatechecker"
 start_cmd="${name}_start"
 stop_cmd=":"
 
 updatechecker_start()
 {
-        echo "....... STARTING updatechecker ...."
-        /opt/local/updatecheck/fetch_update_information.sh &
+    if pgrep -f "/opt/local/updatecheck/fetch_update_information.sh" >/dev/null; then
+        echo "updatechecker is already running."
+        return 1
+    fi
+    /opt/local/updatecheck/fetch_update_information.sh &
 }
+
 
 rcvar="${name}_enable"
 load_rc_config $name
