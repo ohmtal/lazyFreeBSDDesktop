@@ -5,7 +5,7 @@ I started in Summer 2025 with this collection, because i love to setup FreeBSD o
 
 Tested with FreeBSD `14.3` and initial with `15.0`, but **use at your own risk!**
 
-## 🚀 Scripts 
+## Scripts 
 
 - **installDesktop.sh** Call a minimal collection of scripts:
   - **recommended for install and setup a Desktop without any other changes.**
@@ -51,7 +51,7 @@ Tested with FreeBSD `14.3` and initial with `15.0`, but **use at your own risk!*
 
 - **freeBSD_updatecheck.sh** install an system to notify the user about updates see also `files/updatecheck/README`
 
-## 💻 Lenovo Scripts
+## Lenovo Scripts
 
 The scripts can be found in ./notebook
 
@@ -60,10 +60,7 @@ The scripts can be found in ./notebook
 - **e531.sh** script for Thinkpad E 531 to setup sound and modules
 - **ideapadS10_3.sh** I guess i'am the last one on earth using this netbook with FreeBSD. Useful to setup the old intel graphic so I was able to play my game Auteria with 10 fps 🙃
 
-## 🦴 Other Scripts
+## Other Scripts
  - **freeBSD_current.sh** This sets FreeBSD to current repos. It's maybe obsolete i used it with FreeBSD 14.3, but with 15 it should *not* be used.
  - **freeBSD_brokenConsole.sh** fix tty, when you go from desktop to tty and it looks like an old 8 bit game.
  - **freeBSD_steam.sh** **experimental** steam setup - setup user "steam" and all the stuff to run steam - i tested it once but would not use it.
-
-
-
