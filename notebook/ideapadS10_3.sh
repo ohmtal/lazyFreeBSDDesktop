@@ -1,15 +1,14 @@
 #!/bin/sh
 
-
 cd `dirname "$0"`
 #include
-. ./_functions.sh
+. ../include/_functions.sh
 
 clear
 _root_check
 
 echo "================================================================="
-echo "Settings for my Lenovo IdeaPad S10-3"
+echo "Settings for Lenovo IdeaPad S10-3"
 echo "================================================================="
 
 # intel graphics this rocks:

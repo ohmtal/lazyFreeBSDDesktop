@@ -1,8 +1,8 @@
 #!/bin/sh
 
 cd `dirname "$0"`
-. ./_functions.sh
-. ./_dialogs.sh
+. ./include/_functions.sh
+. ./include/_dialogs.sh
 
 
 _fasterboot()

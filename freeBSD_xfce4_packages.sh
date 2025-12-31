@@ -18,8 +18,8 @@ xfce="xfce xfce4-whiskermenu-plugin xfce4-pulseaudio-plugin xfce4-goodies"
 lightdm="lightdm lightdm-gtk-greeter"
 
 cd `dirname "$0"`
-. ./_functions.sh
-. ./_dialogs.sh
+. ./include/_functions.sh
+. ./include/_dialogs.sh
 # . ./freeBSD_current.sh
 . ./freeBSD_musthave.sh
 # ------------------------------------------------------------------------------
@@ -70,12 +70,15 @@ select_packages()
 # some packages to install :D
 install_packages()
 {
+  # make sure we set DBUS
+  sysrc dbus_enable="YES"
+
   for pkg in $packages; do
       # echo "INSTALL $pkg...."
       $PKGINSTALL "$pkg"
   done
   # add skel and opt files :
-  sh _freeBSDPrepareOPT.sh
+  sh ./include/_freeBSDPrepareOPT.sh
   # add lightdm
   sysrc lightdm_enable="YES"
 }

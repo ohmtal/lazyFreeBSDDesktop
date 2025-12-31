@@ -3,8 +3,8 @@
 # Install update checker
 # ------------------------------------------------------------------------------
 cd `dirname "$0"`
-. ./_functions.sh
-. ./_dialogs.sh
+. ./include/_functions.sh
+. ./include/_dialogs.sh
 # ------------------------------------------------------------------------------
 _updatecheck()
 {

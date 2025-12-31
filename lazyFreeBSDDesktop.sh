@@ -19,8 +19,8 @@
 
 
 cd `dirname "$0"`
-. ./_functions.sh
-. ./_dialogs.sh
+. ./include/_functions.sh
+. ./include/_dialogs.sh
 #. ./freeBSD_current.sh
 . ./freeBSD_musthave.sh
 . ./freeBSD_prepare_user.sh
@@ -105,7 +105,7 @@ _packages()
     _check_canceled
 
 
-    result="xfce4 toms"
+    result="xfce4 basic toms"
     menu_result "Select package list"
     sh freeBSD_"$selection"_packages.sh
     _check_canceled
@@ -118,7 +118,7 @@ lazy_greeting
 _fasterboot
 _packages
 # add skel and opt files:
-sh _freeBSDPrepareOPT.sh
+sh ./include/_freeBSDPrepareOPT.sh
 pu_select_user
 # add update check ?!
 updateCheckWelcome

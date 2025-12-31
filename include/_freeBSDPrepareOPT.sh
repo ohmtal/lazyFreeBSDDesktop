@@ -6,8 +6,8 @@ cd `dirname "$0"`
 
 # ------------------------------------------------------------------------------
 _root_check
-cp -r files/overlay/usr/* /usr/
-cp -r files/overlay/opt /
+cp -r ../files/overlay/usr/* /usr/
+cp -r ../files/overlay/opt /
 install_wine_i386
 
 

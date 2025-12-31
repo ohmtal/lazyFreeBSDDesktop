@@ -1,29 +1,16 @@
 #!/bin/sh
 # ------------------------------------------------------------------------------
-# Version 0.251009
+# Version 0.251209
 # ------------------------------------------------------------------------------
 musthave="xorg sudo"
 basic="mc bash btop smartmontools links wget screen"
-fusefsExtras="fusefs-afuse fusefs-ext2 fusefs-lkl fusefs-ntfs fusefs-smbnetfs fusefs-sshfs fusefs-ufs"
-windos="wine wine-proton dosbox"
-devel="pkgconf cmake gcc libGLU openal-soft libvorbis hidapi nasm gtk3 libunwind openjdk21-jre"
-sdl="SDL sdl2 sdl3 sdl12-compat"
-godot="godot godot-tools"
-versioncontrol="git cvs"
-xdevel="kdevelop lazarus-qt6"
-graphic="krita blender gimp ristretto"
-multimedia="mplayer obs-studio ffmpeg dsbmixer"
-extras="kate plank zenity xarchiver"
 internet="firefox thunderbird"
-#  telegram-desktop
-games="gnome-mahjongg quadrapassel"
 kde="plasma6-plasma konsole dolphin falkon"
 xfce="xfce xfce4-whiskermenu-plugin xfce4-pulseaudio-plugin xfce4-goodies"
 cinnamon="cinnamon";
 lxde="lxde-meta"
 wmaker="windowmaker wmakerconf wmclock wmcpuload wmnetload wmsmixer wmbsdbatt wmmemload"
 lightweight="geany pcmanfm links"
-# geany-plugins
 
 cd `dirname "$0"`
 . ./include/_functions.sh
@@ -44,19 +31,8 @@ select_packages()
     --clear \
     --cancel-label "Cancel" \
     --checklist "Please select:" $HEIGHT $WIDTH 20 \
-        basic "$basic" on\
-        fusefsExtras "$fusefsExtras" off\
-        windos "$windos" off\
-        devel "$devel" off\
-        sdl "$sdl" off\
-        versioncontrol "$versioncontrol" off\
-        xdevel "$xdevel" off\
-        graphic "$graphic" on\
-        multimedia "$multimedia" on\
-        extras "$extras" on\
+        basic "$basic" off\
         internet "$internet" on\
-        games "$games" off\
-        godot "$godot" off\
         xfce "$xfce" on\
         cinnamon "$cinnamon" off\
         kde "$kde" off\

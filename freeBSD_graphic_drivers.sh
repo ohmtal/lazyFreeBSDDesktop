@@ -6,8 +6,8 @@
 #         https://github.com/ghostbsd/xconfig/
 #------------------------------------------------------------------------------
 cd `dirname "$0"`
-. ./_functions.sh
-. ./_dialogs.sh
+. ./include/_functions.sh
+. ./include/_dialogs.sh
 #------------------------------------------------------------------------------
 _moveXorgConf()
 {
@@ -78,13 +78,14 @@ _select_graphics()
     --title "Graphic Driver Selection" \
     --clear \
     --cancel-label "Cancel" \
-    --menu "Please select:" 0 0 6 \
+    --menu "Please select:" 0 0 8 \
     "0" "Vesa - old graphics" \
     "1" "Intel" \
     "2" "AMD" \
     "3" "NVidia current" \
     "4" "NVidia 470" \
     "5" "NVidia 390" \
+    "6" ">> skip graphic driver setup" \
     2>&1 1>&3)
   exit_status=$?
   exec 3>&-
@@ -133,6 +134,10 @@ _select_graphics()
       echo "NVidia 390"
       _cleanup
       _nvidia390
+      ;;
+    6 )
+      clear
+      echo "nothing to do"
       ;;
   esac
 }

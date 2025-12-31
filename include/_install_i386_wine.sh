@@ -1,5 +1,7 @@
 #!/bin/sh
-. ./_dialogs.sh
+# ------------------------------------------------------------------------------
+# 2025-12-31: seams to be broken with FreeBSD 15:
+#   pkg: Failed to fetch https://pkg.FreeBSD.org/FreeBSD:15:i386/quarterly/meta.conf: Not found
 # ------------------------------------------------------------------------------
 # INSTALLING wine i386 in /opt/user !
 install_wine_i386()

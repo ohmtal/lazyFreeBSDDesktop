@@ -11,9 +11,9 @@
 
 # ------------------------------------------------------------------------------
 cd `dirname "$0"`
-. ./_functions.sh
-. ./_dialogs.sh
-. ./_install_i386_wine.sh
+. ./include/_functions.sh
+. ./include/_dialogs.sh
+. ./include/_install_i386_wine.sh
 
 # ------------------------------------------------------------------------------
 pu_execute() {

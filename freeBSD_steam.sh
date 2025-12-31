@@ -1,7 +1,7 @@
 #!/bin/sh
 # ------------------------------------------------------------------------------
 # FreeBSD Steam
-#  W A R N I G !!!!! IMSECURE SHIT !!!!!!!
+#  W A R N I G !!!!! IMSECURE SHIT => user steam pass steam !!!!!!!
 # @author XXTH
 # @since 2025-11-20
 # ------------------------------------------------------------------------------
@@ -50,15 +50,18 @@ steam_pass="steam"
 steam_autologin=0
 # ------------------------------------------------------------------------------
 cd `dirname "$0"`
-. ./_functions.sh
-. ./_dialogs.sh
+. ./include/_functions.sh
+. ./include/_dialogs.sh
 . ./freeBSD_prepare_user.sh
 # ------------------------------------------------------------------------------
 stream_greeting()
 {
     result=\
 "\
-Warning this will modifiy the system:
+ *** Warning ***
+
+ This script is experimental and will modifiy the system:
+
  * Load  linux and nullfs kernel modules
  * Set security.bsd.unprivileged_chroot and vfs.usermount sysctls to 1.
  * Add a insecure but non wheel user $steam_user with password $steam_pass

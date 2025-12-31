@@ -2,14 +2,15 @@
 
 cd `dirname "$0"`
 #include
-. ./_functions.sh
+. ../include/_functions.sh
 
 clear
 _root_check
 
 echo "================================================================="
-echo "Settings for my Lenovo ThinkPad x260"
+echo "Settings for Lenovo ThinkPad x260"
 echo "================================================================="
+
 
 sh thinkpad.sh
 

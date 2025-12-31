@@ -3,8 +3,8 @@
 # console ttys unusable from X11 fix
 # ------------------------------------------------------------------------------
 cd `dirname "$0"`
-. ./_functions.sh
-. ./_dialogs.sh
+. ./include/_functions.sh
+. ./include/_dialogs.sh
 
 _root_check
 

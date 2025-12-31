@@ -3,8 +3,8 @@
 # Select displaymanager
 # ------------------------------------------------------------------------------
 cd `dirname "$0"`
-. ./_functions.sh
-. ./_dialogs.sh
+. ./include/_functions.sh
+. ./include/_dialogs.sh
 # ------------------------------------------------------------------------------
 select_display_manager()
 {

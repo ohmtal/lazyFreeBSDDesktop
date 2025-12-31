@@ -2,7 +2,7 @@
 # ------------------------------------------------------------------------------
 # DIALOGS
 # ------------------------------------------------------------------------------
-. ./_functions.sh
+. ./include/_functions.sh
 # check dialog is available
 DIALOG=""
 if [ "$DIALOG" == "" ] && [ "$(_command_exists dialog )" == "1"  ] ; then
