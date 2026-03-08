@@ -78,7 +78,8 @@ pu_select_user()
 # ------------------------------------------------------------------------------
 pu_set_video()
 {
-     pw usermod $pu_user -G video
+# this remove the user from the other groups! bad idea ...
+# disabled!     pw usermod $pu_user -G video
 }
 
 # ------------------------------------------------------------------------------
